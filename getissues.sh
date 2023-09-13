@@ -1,10 +1,11 @@
 #this script saves all issues into json files
 
 offset=0
-domain='http://CUSTOMER.nonamesec.com'
-bearertoken='eyXXXXXXX'
+domain='https://pandg.nonamesec.com'
+bearertoken='eyXXXXX.eyXXX.DOH'
+maxissues=5000
 
-while [ $offset -le 2500 ] 
+while [ $offset -le $maxissues ] 
 outfile='out'"$offset"'.json' 
 do
  curl -vX 'GET' \
